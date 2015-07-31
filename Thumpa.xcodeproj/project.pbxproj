@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64CA1A5F1B6C28250030E638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CA1A5E1B6C28250030E638 /* AppDelegate.swift */; };
+		64CA1A611B6C28250030E638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CA1A601B6C28250030E638 /* ViewController.swift */; };
+		64CA1A641B6C28250030E638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64CA1A621B6C28250030E638 /* Main.storyboard */; };
+		64CA1A661B6C28250030E638 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64CA1A651B6C28250030E638 /* Images.xcassets */; };
+		64CA1A691B6C28250030E638 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64CA1A671B6C28250030E638 /* LaunchScreen.xib */; };
+		64CA1A751B6C28250030E638 /* ThumpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CA1A741B6C28250030E638 /* ThumpaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64CA1A6F1B6C28250030E638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64CA1A511B6C28250030E638 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64CA1A581B6C28250030E638;
+			remoteInfo = Thumpa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64CA1A591B6C28250030E638 /* Thumpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thumpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64CA1A5D1B6C28250030E638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64CA1A5E1B6C28250030E638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64CA1A601B6C28250030E638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64CA1A631B6C28250030E638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64CA1A651B6C28250030E638 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		64CA1A681B6C28250030E638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		64CA1A6E1B6C28250030E638 /* ThumpaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumpaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64CA1A731B6C28250030E638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64CA1A741B6C28250030E638 /* ThumpaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumpaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64CA1A561B6C28250030E638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64CA1A6B1B6C28250030E638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64CA1A501B6C28250030E638 = {
+			isa = PBXGroup;
+			children = (
+				64CA1A5B1B6C28250030E638 /* Thumpa */,
+				64CA1A711B6C28250030E638 /* ThumpaTests */,
+				64CA1A5A1B6C28250030E638 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64CA1A5A1B6C28250030E638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64CA1A591B6C28250030E638 /* Thumpa.app */,
+				64CA1A6E1B6C28250030E638 /* ThumpaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64CA1A5B1B6C28250030E638 /* Thumpa */ = {
+			isa = PBXGroup;
+			children = (
+				64CA1A5E1B6C28250030E638 /* AppDelegate.swift */,
+				64CA1A601B6C28250030E638 /* ViewController.swift */,
+				64CA1A621B6C28250030E638 /* Main.storyboard */,
+				64CA1A651B6C28250030E638 /* Images.xcassets */,
+				64CA1A671B6C28250030E638 /* LaunchScreen.xib */,
+				64CA1A5C1B6C28250030E638 /* Supporting Files */,
+			);
+			path = Thumpa;
+			sourceTree = "<group>";
+		};
+		64CA1A5C1B6C28250030E638 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64CA1A5D1B6C28250030E638 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64CA1A711B6C28250030E638 /* ThumpaTests */ = {
+			isa = PBXGroup;
+			children = (
+				64CA1A741B6C28250030E638 /* ThumpaTests.swift */,
+				64CA1A721B6C28250030E638 /* Supporting Files */,
+			);
+			path = ThumpaTests;
+			sourceTree = "<group>";
+		};
+		64CA1A721B6C28250030E638 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64CA1A731B6C28250030E638 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64CA1A581B6C28250030E638 /* Thumpa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64CA1A781B6C28250030E638 /* Build configuration list for PBXNativeTarget "Thumpa" */;
+			buildPhases = (
+				64CA1A551B6C28250030E638 /* Sources */,
+				64CA1A561B6C28250030E638 /* Frameworks */,
+				64CA1A571B6C28250030E638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Thumpa;
+			productName = Thumpa;
+			productReference = 64CA1A591B6C28250030E638 /* Thumpa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64CA1A6D1B6C28250030E638 /* ThumpaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64CA1A7B1B6C28250030E638 /* Build configuration list for PBXNativeTarget "ThumpaTests" */;
+			buildPhases = (
+				64CA1A6A1B6C28250030E638 /* Sources */,
+				64CA1A6B1B6C28250030E638 /* Frameworks */,
+				64CA1A6C1B6C28250030E638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64CA1A701B6C28250030E638 /* PBXTargetDependency */,
+			);
+			name = ThumpaTests;
+			productName = ThumpaTests;
+			productReference = 64CA1A6E1B6C28250030E638 /* ThumpaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64CA1A511B6C28250030E638 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Bretton Wade";
+				TargetAttributes = {
+					64CA1A581B6C28250030E638 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Z99WWQFGP8;
+					};
+					64CA1A6D1B6C28250030E638 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 64CA1A581B6C28250030E638;
+					};
+				};
+			};
+			buildConfigurationList = 64CA1A541B6C28250030E638 /* Build configuration list for PBXProject "Thumpa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64CA1A501B6C28250030E638;
+			productRefGroup = 64CA1A5A1B6C28250030E638 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64CA1A581B6C28250030E638 /* Thumpa */,
+				64CA1A6D1B6C28250030E638 /* ThumpaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64CA1A571B6C28250030E638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64CA1A641B6C28250030E638 /* Main.storyboard in Resources */,
+				64CA1A691B6C28250030E638 /* LaunchScreen.xib in Resources */,
+				64CA1A661B6C28250030E638 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64CA1A6C1B6C28250030E638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64CA1A551B6C28250030E638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64CA1A611B6C28250030E638 /* ViewController.swift in Sources */,
+				64CA1A5F1B6C28250030E638 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64CA1A6A1B6C28250030E638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64CA1A751B6C28250030E638 /* ThumpaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64CA1A701B6C28250030E638 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64CA1A581B6C28250030E638 /* Thumpa */;
+			targetProxy = 64CA1A6F1B6C28250030E638 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64CA1A621B6C28250030E638 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64CA1A631B6C28250030E638 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64CA1A671B6C28250030E638 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64CA1A681B6C28250030E638 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64CA1A761B6C28250030E638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64CA1A771B6C28250030E638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64CA1A791B6C28250030E638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Thumpa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		64CA1A7A1B6C28250030E638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Thumpa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		64CA1A7C1B6C28250030E638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ThumpaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thumpa.app/Thumpa";
+			};
+			name = Debug;
+		};
+		64CA1A7D1B6C28250030E638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ThumpaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thumpa.app/Thumpa";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64CA1A541B6C28250030E638 /* Build configuration list for PBXProject "Thumpa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64CA1A761B6C28250030E638 /* Debug */,
+				64CA1A771B6C28250030E638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64CA1A781B6C28250030E638 /* Build configuration list for PBXNativeTarget "Thumpa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64CA1A791B6C28250030E638 /* Debug */,
+				64CA1A7A1B6C28250030E638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		64CA1A7B1B6C28250030E638 /* Build configuration list for PBXNativeTarget "ThumpaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64CA1A7C1B6C28250030E638 /* Debug */,
+				64CA1A7D1B6C28250030E638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64CA1A511B6C28250030E638 /* Project object */;
+}
