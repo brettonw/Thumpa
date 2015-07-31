@@ -1,2 +1,2 @@
-# thumpa
+# Thumpa
 A revolutionary music maker
