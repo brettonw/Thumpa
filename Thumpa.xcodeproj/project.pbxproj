@@ -156,6 +156,7 @@
 		64CA1A511B6C28250030E638 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Bretton Wade";
 				TargetAttributes = {
@@ -414,6 +415,7 @@
 				64CA1A7A1B6C28250030E638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64CA1A7B1B6C28250030E638 /* Build configuration list for PBXNativeTarget "ThumpaTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +424,7 @@
 				64CA1A7D1B6C28250030E638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
