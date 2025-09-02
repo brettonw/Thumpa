@@ -1,0 +1,37 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Install xcbeautify
+        run: brew install xcbeautify
+
+      - name: List workspace schemes (ensure scheme is Shared)
+        run: xcodebuild -list -workspace Thumpa.xcworkspace || true
+
+      - name: Build and test via script
+        run: |
+          chmod +x scripts/test.sh
+          RESULT_BUNDLE=TestResults.xcresult \
+            ./scripts/test.sh --destination "platform=iOS Simulator,OS=latest,name=iPhone 15"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults.xcresult
+          path: TestResults.xcresult

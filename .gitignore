@@ -34,3 +34,7 @@ Carthage/Build
 
 # DS_Store
 .DS_Store
+
+LocalTestResults.xcresult/
+.local*
+TestResults-*
