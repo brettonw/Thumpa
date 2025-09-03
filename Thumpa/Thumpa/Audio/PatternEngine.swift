@@ -10,6 +10,10 @@ final class PatternEngine {
     private let ticksPerBeat = 16
     private var ticksPerBar: Int { beatsPerBar * ticksPerBeat }
 
+    // Expose timing parameters for UI
+    var beatsPerBarCount: Int { beatsPerBar }
+    var ticksPerBeatCount: Int { ticksPerBeat }
+
     private let kickPlayer = AVAudioPlayerNode()
     private let snarePlayer = AVAudioPlayerNode()
     private let hihatPlayer = AVAudioPlayerNode()
