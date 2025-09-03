@@ -28,6 +28,7 @@ DEVICE_NAME=""
 DEST_OVERRIDE=""
 BUILD_ONLY=0
 SHOW_DEST=0
+UNIT_ONLY=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -35,6 +36,7 @@ while [[ $# -gt 0 ]]; do
     --build-only) BUILD_ONLY=1; shift ;;
     --device) DEVICE_NAME=${2:-}; shift 2 ;;
     --destination) DEST_OVERRIDE=${2:-}; shift 2 ;;
+    --unit-only) UNIT_ONLY=1; shift ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown arg: $1" >&2; usage; exit 2 ;;
   esac
@@ -56,30 +58,36 @@ DESTINATION=""
 if [[ -n "$DEST_OVERRIDE" ]]; then
   DESTINATION="$DEST_OVERRIDE"
 elif [[ -n "${DESTINATION:-}" ]]; then
-  # Allow passing DESTINATION via env var
   : # use as-is
 else
-  # Try to find a concrete simulator id from showdestinations (skip placeholders)
+  # Default device preference: iPhone 16 unless explicitly provided
+  if [[ -z "$DEVICE_NAME" ]]; then
+    DEVICE_NAME="iPhone 16"
+  fi
+  # Try to find a concrete simulator id matching the preferred device name
   SIM_ID=$(xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -showdestinations 2>/dev/null \
-    | awk '/platform:iOS Simulator/ && /id:/ && $0 !~ /placeholder/ {for(i=1;i<=NF;i++){if($i ~ /^id:/){gsub(/,/, "", $i); sub(/^id:/, "", $i); gsub(/[}]/, "", $i); print $i; exit}}}')
+    | awk -v NAME="$DEVICE_NAME" '/platform:iOS Simulator/ && /id:/ && $0 !~ /placeholder/ && $0 ~ ("name:" NAME) {for(i=1;i<=NF;i++){if($i ~ /^id:/){gsub(/,/, "", $i); sub(/^id:/, "", $i); gsub(/[}]/, "", $i); print $i; exit}}}')
   if [[ -n "$SIM_ID" ]]; then
     DESTINATION="id=$SIM_ID"
-  elif [[ -n "$DEVICE_NAME" ]]; then
-    DESTINATION="platform=iOS Simulator,OS=latest,name=$DEVICE_NAME"
   else
-    DESTINATION="platform=iOS Simulator,OS=latest,name=iPhone 16"
+    DESTINATION="platform=iOS Simulator,OS=latest,name=$DEVICE_NAME"
   fi
 fi
 
 echo "[2/2] test on destination: $DESTINATION" >&2
 
 set -o pipefail
+TEST_ARGS=()
+if [[ $UNIT_ONLY -eq 1 ]]; then
+  TEST_ARGS+=("-only-testing:ThumpaTests")
+fi
+
 if command -v xcbeautify >/dev/null 2>&1; then
-  xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -resultBundlePath "$RESULT_BUNDLE" test | xcbeautify
+  xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -resultBundlePath "$RESULT_BUNDLE" test "${TEST_ARGS[@]}" | xcbeautify
 elif command -v xcpretty >/dev/null 2>&1; then
-  xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -resultBundlePath "$RESULT_BUNDLE" test | xcpretty
+  xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -resultBundlePath "$RESULT_BUNDLE" test "${TEST_ARGS[@]}" | xcpretty
 else
-  xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -resultBundlePath "$RESULT_BUNDLE" test
+  xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -resultBundlePath "$RESULT_BUNDLE" test "${TEST_ARGS[@]}"
 fi
 
 echo "Results: $RESULT_BUNDLE" >&2

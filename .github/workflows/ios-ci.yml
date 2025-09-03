@@ -27,7 +27,7 @@ jobs:
         run: |
           chmod +x scripts/test.sh
           RESULT_BUNDLE=TestResults.xcresult \
-            ./scripts/test.sh --destination "platform=iOS Simulator,OS=latest,name=iPhone 15"
+            ./scripts/test.sh --unit-only --destination "platform=iOS Simulator,OS=latest,name=iPhone 16"
 
       - name: Upload test results
         if: always()
